@@ -12,7 +12,11 @@ Source code of Nomad is available on <a href="https://github.com/nomad-project/"
 
 Architecture
 
-The application consists of two services one for the backend and another for the frontend. The Backend is a REST api build in Go using <a href="https://github.com/urfave/negroni" target="_blank">Negroni</a> HTTP Middleware and a mySql Database.
+The application consists of two services:
+
+- The Backend is a REST api build in Go using <a href="https://github.com/urfave/negroni" target="_blank">Negroni</a> HTTP Middleware and a mySql Database.
+
+- The Frontend is a nodeJs application build with React-Redux using the <a href="https://github.com/zeit/next.js" target="_blank">NextJS</a> framework to facilitate the server-side rendering
 
 {{< figure src="/images/diagram.jpg" title="Nomad architecture diagram" >}}
 
