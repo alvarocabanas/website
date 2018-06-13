@@ -16,10 +16,14 @@ The application consists of two services:
 
 - The Backend is a REST api build in Go using <a href="https://github.com/urfave/negroni" target="_blank">Negroni</a> HTTP Middleware and a mySql Database.
 
-- The Frontend is a nodeJs application build with React-Redux using the <a href="https://github.com/zeit/next.js" target="_blank">NextJS</a> framework to facilitate the server-side rendering
+- The Frontend is a nodeJs application build with React-Redux using the <a href="https://github.com/zeit/next.js" target="_blank">NextJS</a> framework to facilitate the server-side rendering. All data is retrieved from the REST api service.
+
+Each service is running on its own docker container on a ECS Cluster and the AWS Elastic Load Balancer is enrouting all /api/* calls to the backend service and all the other calls to the frontend service.
 
 {{< figure src="/images/diagram.jpg" title="Nomad architecture diagram" >}}
 
 Continuous integration with Travis and AWS ECS
+
+
 
 {{< figure src="/images/" title="Nomad architecture diagram" >}}
