@@ -18,12 +18,15 @@ The application consists of two services:
 
 - The Frontend is a nodeJs application build with React-Redux using the <a href="https://github.com/zeit/next.js" target="_blank">NextJS</a> framework to facilitate the server-side rendering. All data is retrieved from the REST api service.
 
-Each service is running on its own docker container on a ECS Cluster and the AWS Elastic Load Balancer is enrouting all /api/* calls to the backend service and all the other calls to the frontend service.
+Implementation on Amazon Web Service
+
+Each service is running on its own docker container on an ECS Cluster. The Cluster has 2 instances and each instance is running 1 Frontend service and one Backend Service.
+
+The Elastic Load Balancer is enrouting all /api/* calls to the backend service on one of the two instances and all the other calls to the frontend service on one of the instances.
 
 {{< figure src="/images/diagram.jpg" title="Nomad architecture diagram" >}}
 
+
 Continuous integration with Travis and AWS ECS
-
-
 
 {{< figure src="/images/" title="Nomad architecture diagram" >}}
