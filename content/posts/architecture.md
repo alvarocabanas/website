@@ -10,7 +10,7 @@ In this article I will explain the architecture of Nomad, a forum application to
 Source code of Nomad is available on <a href="https://github.com/nomad-project/" target="_blank">GitHub</a>.
 
 
-Architecture
+<h2>Architecture</h2>
 
 The application consists of two services:
 
@@ -24,9 +24,9 @@ Each service is running on its own docker container on an ECS Cluster. The Clust
 
 The Elastic Load Balancer is enrouting all /api/* calls to the backend service on one of the two instances and all the other calls to the frontend service on one of the instances.
 
-{{< figure src="/images/diagram.jpg" title="Nomad architecture diagram" >}}
+{{< figure src="/images/diagram.jpg" >}}
 
 
-Continuous integration with Travis and AWS ECS
+<h2>Continuous integration with Travis and AWS ECS</h2>
 
-{{< figure src="/images/" title="Nomad architecture diagram" >}}
+{{< figure src="/images/diagramCI.jpg" >}}
