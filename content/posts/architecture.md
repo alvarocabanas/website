@@ -29,4 +29,10 @@ The Elastic Load Balancer is enrouting all /api/* calls to the backend service o
 
 <h2>Continuous integration with Travis and AWS ECS</h2>
 
+The application uses Travis to achieve Continuous integration. 
+
+Both the frontend and the backend are unit tested and, each time code is pushed to master in github, Travis catches it and ensures all the unit tests are passed and the code follows the Linting requisites.
+
+In case there weren't any errors, travis triggers two bash scripts, one that builds and pushes the docker image to ECS and one that creates the new task using the new docker image and defines the new service.
+
 {{< figure src="/images/diagramCI.jpg" >}}
