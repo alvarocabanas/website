@@ -1,6 +1,6 @@
 baseURL = "http://www.alvarocabanas.com"
 languageCode = "es-es"
-title = "Alvaro Cabanas web"
+title = "Alvaro Cabanas"
 theme = "ananke"
 
 MetaDataFormat = "yaml"
