@@ -1,8 +1,9 @@
 ---
 title: "Building a microservice app with AWS, Golang and NextJs"
+description: "The last theme you'll ever need. Maybe."
 date: 2018-06-09T21:52:43+02:00
 draft: true
-featured_image: '/images/gohugo-default-sample-hero-image.jpg'
+featured_image: '/images/archHero.jpg'
 ---
 
 In this article I will explain the architecture of Nomad, a forum application to post, read and rate travel articles. The details of each technology used to build this application will be explained in future articles.

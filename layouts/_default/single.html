@@ -1,7 +1,10 @@
+
+
 {{ define "header" }}
    {{/* We can override any block in the baseof file be defining it in the template */}}
-  {{ partial "page-header.html" . }}
+  {{ partial "post-header.html" . }}
 {{ end }}
+
 
 {{ define "main" }}
   <article class="flex-l flex-wrap justify-between mw8 center">
@@ -21,8 +24,16 @@
       <time class="f6 mv4 dib tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
         {{- .Date.Format "January 2, 2006" -}}
       </time>
-    </header>
+      {{ $featured_image := .Params.featured_image }}
+      {{ if $featured_image }}
+        {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
+        {{ $featured_image := (trim $featured_image "/") | absURL }}
+        
+          <img src="{{ $featured_image }}"/>
 
+      {{ end }}
+    </header>
+    
     <main class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l">
         {{- .Content -}}
       {{- partial "tags.html" . -}}
